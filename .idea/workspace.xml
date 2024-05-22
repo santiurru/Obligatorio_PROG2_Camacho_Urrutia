@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="1.1 - correcccion de imports">
+    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/Lista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/Nodo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/WrongPositionException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/MySearchBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/MySearchBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/MySearchBinaryTreeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/MySearchBinaryTreeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/PrueboArbolBinBusqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/PrueboArbolBinBusqueda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/PrueboArbolBinBusquedaClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/PrueboArbolBinBusquedaClientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/circularlinkedlist/MyCircularLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/circularlinkedlist/MyCircularLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/linkedlist/MyLinkedListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/linkedlist/MyLinkedListImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/linkedlist/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/linkedlist/MyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/linkedlist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/linkedlist/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/queue/EmptyQueueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/queue/EmptyQueueException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/queue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/queue/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/stack/EmptyStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/stack/EmptyStackException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/stack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/stack/MyStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adt/tests/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uy/edu/um/adt/tests/Tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +35,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.Tests.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/matia/PROGRAMACION 2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,8 +52,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\santi\Git Repositories\Obligatorio_PROG2_Camacho_Urrutia\src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia\src\TADS" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="TADS" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,8 +75,11 @@
       <option name="presentableId" value="Default" />
       <updated>1715697477334</updated>
       <workItem from="1715697478380" duration="2135000" />
-      <workItem from="1716302083697" duration="652000" />
-      <workItem from="1716385556496" duration="917000" />
+      <workItem from="1715699738271" duration="709000" />
+      <workItem from="1715906984877" duration="362000" />
+      <workItem from="1715907494739" duration="13000" />
+      <workItem from="1715953302287" duration="60000" />
+      <workItem from="1716209730158" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -113,13 +97,13 @@
       <option name="project" value="LOCAL" />
       <updated>1715698160981</updated>
     </task>
-    <task id="LOCAL-00003" summary="1.1 - correcccion de imports">
+    <task id="LOCAL-00003" summary="initial commit">
       <option name="closed" value="true" />
-      <created>1716216622001</created>
+      <created>1715907229585</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1716216622001</updated>
+      <updated>1715907229585</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -140,7 +124,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <MESSAGE value="1.1 - correcccion de imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.1 - correcccion de imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
