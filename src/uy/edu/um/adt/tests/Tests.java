@@ -1,11 +1,11 @@
-package adt.tests;
+package uy.edu.um.adt.tests;
 
-import adt.linkedlist.MyLinkedListImpl;
-import adt.linkedlist.MyList;
-import adt.queue.EmptyQueueException;
-import adt.queue.MyQueue;
-import adt.stack.EmptyStackException;
-import adt.stack.MyStack;
+import adtOld.linkedlist.MyLinkedListImpl;
+import adtOld.linkedlist.MyList;
+import adtOld.queue.EmptyQueueException;
+import adtOld.queue.MyQueue;
+import adtOld.stack.EmptyStackException;
+import adtOld.stack.MyStack;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

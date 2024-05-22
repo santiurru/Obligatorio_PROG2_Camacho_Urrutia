@@ -1,4 +1,4 @@
-package adt.linkedlist;
+package adtOld.linkedlist;
 
 public class Node<T> {
 

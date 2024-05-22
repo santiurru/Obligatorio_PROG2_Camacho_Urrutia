@@ -4,10 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="initial commit">
+    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="1.1 - correcccion de imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/ListaEnlazada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/ListaEnlazada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TADS/ListaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TADS/ListaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TADS/Lista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TADS/Nodo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TADS/WrongPositionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/MySearchBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/MySearchBinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/MySearchBinaryTreeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/MySearchBinaryTreeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/PrueboArbolBinBusqueda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/PrueboArbolBinBusqueda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/PrueboArbolBinBusquedaClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/PrueboArbolBinBusquedaClientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/binarytree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/binarytree/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/circularlinkedlist/MyCircularLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/circularlinkedlist/MyCircularLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/linkedlist/MyLinkedListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/linkedlist/MyLinkedListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/linkedlist/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/linkedlist/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/linkedlist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/linkedlist/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/queue/EmptyQueueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/queue/EmptyQueueException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/queue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/queue/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/stack/EmptyStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/stack/EmptyStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/stack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adtOld/stack/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adt/tests/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uy/edu/um/adt/tests/Tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,23 +51,33 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Tests.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\santi\Git Repositories\Obligatorio_PROG2_Camacho_Urrutia\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -68,6 +94,8 @@
       <option name="presentableId" value="Default" />
       <updated>1715697477334</updated>
       <workItem from="1715697478380" duration="2135000" />
+      <workItem from="1716302083697" duration="652000" />
+      <workItem from="1716385556496" duration="917000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -85,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715698160981</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.1 - correcccion de imports">
+      <option name="closed" value="true" />
+      <created>1716216622001</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716216622001</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="1.1 - correcccion de imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1 - correcccion de imports" />
   </component>
 </project>

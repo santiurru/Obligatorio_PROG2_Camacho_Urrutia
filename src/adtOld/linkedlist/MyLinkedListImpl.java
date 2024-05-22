@@ -1,9 +1,9 @@
-package adt.linkedlist;
+package adtOld.linkedlist;
 
-import adt.queue.EmptyQueueException;
-import adt.queue.MyQueue;
-import adt.stack.EmptyStackException;
-import adt.stack.MyStack;
+import adtOld.queue.EmptyQueueException;
+import adtOld.queue.MyQueue;
+import adtOld.stack.EmptyStackException;
+import adtOld.stack.MyStack;
 
 public class MyLinkedListImpl<T> implements MyList<T>, MyQueue<T>, MyStack<T> {
 

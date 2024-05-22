@@ -1,9 +1,9 @@
 /**
  * 
  */
-package adt.binarytree;
+package adtOld.binarytree;
 
-import adt.linkedlist.MyList;
+import adtOld.linkedlist.MyList;
 
 public interface MySearchBinaryTree<K extends Comparable<K>, V> {
 

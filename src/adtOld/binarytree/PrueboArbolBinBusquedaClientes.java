@@ -1,6 +1,6 @@
-package adt.binarytree;
+package adtOld.binarytree;
 
-import adt.linkedlist.MyList;
+import adtOld.linkedlist.MyList;
 
 //import uy.edu.um.adt.binarytree.MySearchBinaryTree;
 //import uy.edu.um.adt.binarytree.MySearchBinaryTreeImpl;

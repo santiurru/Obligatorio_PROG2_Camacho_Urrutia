@@ -1,10 +1,10 @@
 /**
  * 
  */
-package adt.binarytree;
+package adtOld.binarytree;
 
-import adt.linkedlist.MyLinkedListImpl;
-import adt.linkedlist.MyList;
+import adtOld.linkedlist.MyLinkedListImpl;
+import adtOld.linkedlist.MyList;
 
 public class MySearchBinaryTreeImpl<K extends Comparable<K>, V> implements
 		MySearchBinaryTree<K, V> {

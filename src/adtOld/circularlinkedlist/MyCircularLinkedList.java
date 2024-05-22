@@ -1,4 +1,4 @@
-package adt.circularlinkedlist;
+package adtOld.circularlinkedlist;
 
 public interface MyCircularLinkedList<T> {
     void add(T value);

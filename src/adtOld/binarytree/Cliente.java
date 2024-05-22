@@ -1,4 +1,4 @@
-package adt.binarytree;
+package adtOld.binarytree;
 public class Cliente {
 //public class Cliente implements Comparable<Cliente>{
     String nombre;

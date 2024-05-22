@@ -1,4 +1,4 @@
-package adt.queue;
+package adtOld.queue;
 
 public interface MyQueue<T> {
 

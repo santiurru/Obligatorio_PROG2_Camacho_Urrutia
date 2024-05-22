@@ -1,4 +1,4 @@
-package adt.stack;
+package adtOld.stack;
 
 
 public interface MyStack<T> {
