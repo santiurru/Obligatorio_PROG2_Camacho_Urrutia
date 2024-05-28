@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="eliminados TADs que estaban mal">
+    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="reorganizacion de carpetas, src">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,24 +33,25 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/matia/PROGRAMACION 2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.HashTest.hashTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/santi/Downloads/opencsv-5.9.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia\src\TADS" />
@@ -58,6 +59,29 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="TADS" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HashTest.hashTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Obligatorio_PROG2_Camacho_Urrutia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uy.edu.um.adt.test.hash.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uy.edu.um.adt.test.hash" />
+      <option name="MAIN_CLASS_NAME" value="uy.edu.um.adt.test.hash.HashTest" />
+      <option name="METHOD_NAME" value="hashTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HashTest.hashTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -81,7 +105,13 @@
       <workItem from="1715953302287" duration="60000" />
       <workItem from="1716209730158" duration="79000" />
       <workItem from="1716508389392" duration="792000" />
-      <workItem from="1716555667697" duration="55000" />
+      <workItem from="1716555667697" duration="791000" />
+      <workItem from="1716558421903" duration="285000" />
+      <workItem from="1716574565502" duration="33000" />
+      <workItem from="1716577189658" duration="822000" />
+      <workItem from="1716817606979" duration="1140000" />
+      <workItem from="1716904263073" duration="855000" />
+      <workItem from="1716905558006" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -115,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716508559647</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="reorganizacion de carpetas, src">
+      <option name="closed" value="true" />
+      <created>1716555857306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716555857306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="eliminados TADs que estaban mal" />
-    <option name="LAST_COMMIT_MESSAGE" value="eliminados TADs que estaban mal" />
+    <MESSAGE value="reorganizacion de carpetas, src" />
+    <option name="LAST_COMMIT_MESSAGE" value="reorganizacion de carpetas, src" />
   </component>
 </project>
