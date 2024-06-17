@@ -23,12 +23,16 @@ public class Consulta {
     }
 
     // las da desordenadas
-    public void primeraConsulta(String pais, String fecha) {
+    public void primeraConsulta(String pais, String fecha) throws InformacionInvalida {
         MyList<Song> listaCancionesEnFecha = cancionesPorFecha.get(fecha);
         MyHash<Integer, Song> hashTemp = new MyHashImpl<>(10);
         Song cancionTemp;
         int i = 0;
         int j = 0;
+        if(!fechasUnicas.contains(fecha)){
+            throw new InformacionInvalida();
+        }
+
         while (i < 10 && j < listaCancionesEnFecha.size()) {
             cancionTemp = listaCancionesEnFecha.get(j);
             if (cancionTemp.getCountry().equals(pais) && cancionTemp.getDaily_rank() < 11) {
@@ -37,14 +41,14 @@ public class Consulta {
             }
             j++;
         }
-        i = 1;
+        i = 0;
         while (i < 10) {
             cancionTemp = hashTemp.get(hashTemp.keys().get(i));
             if (cancionTemp.getArtists().size() > 1) {
                 System.out.print(cancionTemp.getDaily_rank() + ". " + cancionTemp.getName() + ", por los artistas ");
-                for (int k = 0; k < cancionTemp.getArtists().size() - 1; k++) {
-                    if (k == cancionTemp.getArtists().size()) {
-                        System.out.print(cancionTemp.getArtists().get(k));
+                for (int k = 0; k < cancionTemp.getArtists().size(); k++) {
+                    if (k == cancionTemp.getArtists().size()-1) {
+                        System.out.println(cancionTemp.getArtists().get(k));
                     } else {
                         System.out.print(cancionTemp.getArtists().get(k) + ", ");
                     }

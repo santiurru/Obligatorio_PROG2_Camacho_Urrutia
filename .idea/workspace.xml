@@ -5,54 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="ayuda commit">
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/CSVImport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/Consulta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/ReadData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/entities/Song.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/exceptions/InformacionInvalida.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/binarytree/BinaryTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/binarytree/SearchBinaryTreeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/binarytree/TreeNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/hash/HashCerrado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/hash/HashInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/hash/NoPerteneceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/hash/NodeH.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/linkedlist/MyLinkedListImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/linkedlist/MyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/linkedlist/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/ntree/Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/ntree/TreeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/queue/EmptyQueueException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/queue/MyQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/stack/EmptyStackException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/stack/MyStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/test/binarytree/BinaryTreeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/test/binarytree/TraverseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/test/hash/HashTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/test/linkedlist/ListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/test/queue/QueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/adt/test/stack/StackTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/binarySearchTree/MyBinarySearchTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/binarySearchTree/MyBinarySearchTreeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/binarySearchTree/NodeBST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/hash/MyHash.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/hash/MyHashImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/heap/HeapNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/heap/MyHeap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/heap/MyHeapImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/linkedlist/MyLinkedListImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/linkedlist/MyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/linkedlist/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/ntree/Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/ntree/TreeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/queue/EmptyQueueException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/queue/MyQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/stack/EmptyStackException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/stack/MyStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/test/linkedlist/ListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/test/queue/QueueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2_adts/src/uy/edu/um/prog2/adt/test/stack/StackTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/Consulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Consulta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -85,7 +45,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "help",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/matia/repositories/Obligatorio_PROG2_Camacho_Urrutia/prog_2_adts",
     "node.js.detected.package.eslint": "true",
