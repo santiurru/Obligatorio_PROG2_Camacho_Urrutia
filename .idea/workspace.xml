@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="uwu commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obligatorio_PROG2_Camacho_Urrutia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Obligatorio_PROG2_Camacho_Urrutia.iml" afterDir="false" />
+    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="ayuda commit">
       <change beforePath="$PROJECT_DIR$/prog_2_adts/src/CSVImport.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/prog_2_adts/src/Consulta.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/prog_2_adts/src/Main.java" beforeDir="false" />
@@ -140,7 +137,7 @@
       <workItem from="1716209730158" duration="79000" />
       <workItem from="1718563833662" duration="136000" />
       <workItem from="1718628776281" duration="16000" />
-      <workItem from="1718629836379" duration="2863000" />
+      <workItem from="1718629836379" duration="3249000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -182,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718630881979</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ayuda commit">
+      <option name="closed" value="true" />
+      <created>1718633066636</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718633066636</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +207,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="uwu commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="uwu commit" />
+    <MESSAGE value="ayuda commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ayuda commit" />
   </component>
 </project>
