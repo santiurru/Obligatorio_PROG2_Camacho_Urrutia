@@ -5,6 +5,7 @@ public class Main {
         Consulta consultas = new Consulta();
         try {
             consultas.primeraConsulta("","2024-05-13");
+            consultas.segundaConsulta("2024-05-13");
         } catch (InformacionInvalida e) {
             throw new RuntimeException(e);
         }

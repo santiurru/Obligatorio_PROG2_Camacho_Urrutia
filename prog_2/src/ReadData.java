@@ -12,10 +12,10 @@ import java.util.List;
 
 
 public class ReadData {
-    public static MyLinkedListImpl<Object> importData(String filePath, int maxRecords) {
-        MyLinkedListImpl<String> fechas = new MyLinkedListImpl<>();
-        MyLinkedListImpl<Object> resultado = new MyLinkedListImpl<>();
-        MyHash<String, MyLinkedListImpl<Song>> hashCanciones = new MyHashImpl<>(10);
+    public static MyList<Object> importData(String filePath, int maxRecords) {
+        MyList<String> fechasUnicas = new MyLinkedListImpl<>();
+        MyList<Object> records = new MyLinkedListImpl<>();
+        MyHash<String, MyList<Song>> canciones = new MyHashImpl<>(10);
         int i=0;
         BufferedReader br;
 
@@ -57,26 +57,26 @@ public class ReadData {
 
                 Song cancion = new Song(spotifyId, name, artists, dailyRank, dailyMovement, weeklyMovement, country, snapshotDate, popularity, isExplicit, durationMs, albumName, albumReleaseDate, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, timeSignature);
 
-                if(hashCanciones.get(snapshotDate) == null) {
-                    MyLinkedListImpl<Song> canciones = new MyLinkedListImpl<Song>();
-                    fechas.add(snapshotDate);
-                    canciones.add(cancion);
-                    hashCanciones.put(snapshotDate, canciones);
+                if(canciones.get(snapshotDate) == null) {
+                    MyLinkedListImpl<Song> cancionesEnFecha = new MyLinkedListImpl<Song>();
+                    fechasUnicas.add(snapshotDate);
+                    cancionesEnFecha.add(cancion);
+                    canciones.put(snapshotDate, cancionesEnFecha);
                 } else {
-                    hashCanciones.get(snapshotDate).add(cancion);
+                    canciones.get(snapshotDate).add(cancion);
                 }
                 i++;
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        resultado.add(hashCanciones);
-        resultado.add(fechas);
+        records.add(canciones);
+        records.add(fechasUnicas);
 
-        return resultado;
+        return records;
     }
 
-    private static MyLinkedListImpl<String> parseArtists(String artistsString) {
+    private static MyLinkedListImpl<String> parseArtists(String artistsString){
         MyLinkedListImpl<String> artistList = new MyLinkedListImpl<>();
         String[] artists = artistsString.split(",");
         for (String artist : artists) {
@@ -85,11 +85,11 @@ public class ReadData {
         return artistList;
     }
 
-    private static int parseInt(String value) {
+    private static int parseInt(String value){
         return Integer.parseInt(value.replaceAll("\"", "").replaceAll(";", "").trim());
     }
 
-    private static double parseDouble(String value) {
+    private static double parseDouble(String value){
         return Double.parseDouble(value.replaceAll("\"", "").trim());
     }
 
