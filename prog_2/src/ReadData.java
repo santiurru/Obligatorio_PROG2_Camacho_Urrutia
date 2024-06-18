@@ -12,18 +12,18 @@ import java.util.List;
 
 
 public class ReadData {
-    public static MyList<Object> importData(String filePath, int maxRecords) {
+    public static MyList<Object> importData(String filePath){
         MyList<String> fechasUnicas = new MyLinkedListImpl<>();
-        MyList<Object> records = new MyLinkedListImpl<>();
         MyHash<String, MyList<Song>> canciones = new MyHashImpl<>(10);
         int i=0;
+        MyList<Object> records = new MyLinkedListImpl<>();
         BufferedReader br;
 
         try {
             br = new BufferedReader(new FileReader(filePath));
             String line;
             br.readLine();
-            while ((line = br.readLine()) != null && i < maxRecords) {
+            while ((line = br.readLine()) != null && i < 748805) {
                 String[] values = line.split("\",\"");
                 List<String> row = new ArrayList<>();
                 for (String value : values) {
@@ -57,12 +57,12 @@ public class ReadData {
 
                 Song cancion = new Song(spotifyId, name, artists, dailyRank, dailyMovement, weeklyMovement, country, snapshotDate, popularity, isExplicit, durationMs, albumName, albumReleaseDate, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, timeSignature);
 
-                if(canciones.get(snapshotDate) == null) {
-                    MyLinkedListImpl<Song> cancionesEnFecha = new MyLinkedListImpl<Song>();
+                if(!canciones.contains(snapshotDate)){
+                    MyList<Song> cancionesEnFecha = new MyLinkedListImpl<>();
                     fechasUnicas.add(snapshotDate);
                     cancionesEnFecha.add(cancion);
                     canciones.put(snapshotDate, cancionesEnFecha);
-                } else {
+                } else{
                     canciones.get(snapshotDate).add(cancion);
                 }
                 i++;
@@ -70,8 +70,8 @@ public class ReadData {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        records.add(canciones);
         records.add(fechasUnicas);
+        records.add(canciones);
 
         return records;
     }

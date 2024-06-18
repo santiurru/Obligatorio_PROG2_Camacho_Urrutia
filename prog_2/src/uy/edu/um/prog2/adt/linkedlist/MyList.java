@@ -16,10 +16,4 @@ public interface MyList<T> {
 
     boolean isEmpty();
     void recorro_recu(Node<T> primero);
-
-    String[] toArray();
-
-    void setByIndex(int index, T value);
-
-    void reverse();
 }

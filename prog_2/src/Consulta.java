@@ -15,22 +15,20 @@ public class Consulta {
     MyList<String> fechasUnicas;
 
     public Consulta() {
-        MyList<Object> temp = ReadData.importData("universal_top_spotify_songs.csv", 748804);
-        this.canciones = (MyHashImpl<String, MyList<Song>>) temp.get(0);
-        this.fechasUnicas = (MyLinkedListImpl<String>) temp.get(1);
-        this.fechasUnicas.reverse();
+        MyList<Object> temp = ReadData.importData("universal_top_spotify_songs.csv");
+        this.canciones = (MyHashImpl<String, MyList<Song>>) temp.get(1);
+        this.fechasUnicas = (MyLinkedListImpl<String>) temp.get(0);
     }
 
-    // las da desordenadas
     public void primeraConsulta(String pais, String fecha) throws InformacionInvalida {
+        if(!fechasUnicas.contains(fecha)){
+            throw new InformacionInvalida();
+        }
         MyList<Song> listaCancionesEnFecha = canciones.get(fecha);
         MyHash<Integer, Song> hashTemp = new MyHashImpl<>(10);
         Song cancionTemp;
         int i = 0;
         int j = 0;
-        if(!fechasUnicas.contains(fecha)){
-            throw new InformacionInvalida();
-        }
 
         while (i < 10 && j < listaCancionesEnFecha.size()) {
             cancionTemp = listaCancionesEnFecha.get(j);
@@ -60,39 +58,42 @@ public class Consulta {
         }
     }
 
-    public void segundaConsulta(String fecha) {
+    public void segundaConsulta(String fecha) throws InformacionInvalida {
+        if(!fechasUnicas.contains(fecha)){
+            throw new InformacionInvalida();
+        }
         int i = 0;
         MyList<Song> listaCancionesEnFecha = canciones.get(fecha);
-        Song cancionActual;
-        MyHash<String, Integer> cancionesOcurrencias = new MyHashImpl<>(100);
-        MyLinkedListImpl<String> idCanciones = new MyLinkedListImpl<>();
+        MyHash<String, Integer> aparicionesCancion = new MyHashImpl<>(50); //guarda las veces q cada cancion aparecio
+        MyList<String> idCanciones = new MyLinkedListImpl<>(); //guarda los spotify id de las canciones
         MyHeapImpl<String, Integer> top5 = new MyHeapImpl<>(false);
-        MyHash<String, String> idNombre = new MyHashImpl<>(100);
+        MyHash<String, String> idNombre = new MyHashImpl<>(50);
         Integer nroTemp;
+        Song cancionActual;
 
         while (i < listaCancionesEnFecha.size() - 1) {
             cancionActual = listaCancionesEnFecha.get(i);
             if (cancionActual.getDaily_rank() < 51) {
-                if (cancionesOcurrencias.contains(cancionActual.getSpotify_id())) {
+                if (aparicionesCancion.contains(cancionActual.getSpotify_id())) {
                     if (!idCanciones.contains(cancionActual.getSpotify_id())) {
                         idNombre.put(cancionActual.getSpotify_id(), cancionActual.getName());
                         idCanciones.add(cancionActual.getSpotify_id());
                     }
-                    nroTemp = cancionesOcurrencias.get(cancionActual.getSpotify_id());
-                    cancionesOcurrencias.remove(cancionActual.getSpotify_id());
-                    cancionesOcurrencias.put(cancionActual.getSpotify_id(), nroTemp + 1);
+                    nroTemp = aparicionesCancion.get(cancionActual.getSpotify_id());
+                    aparicionesCancion.remove(cancionActual.getSpotify_id());
+                    aparicionesCancion.put(cancionActual.getSpotify_id(), nroTemp + 1);
                 } else {
                     if (!idCanciones.contains(cancionActual.getSpotify_id())) {
                         idNombre.put(cancionActual.getSpotify_id(), cancionActual.getName());
                         idCanciones.add(cancionActual.getSpotify_id());
                     }
-                    cancionesOcurrencias.put(cancionActual.getSpotify_id(), 1);
+                    aparicionesCancion.put(cancionActual.getSpotify_id(), 1);
                 }
             }
             i++;
         }
         for (int j = 0; j < idCanciones.size(); j++) {
-            top5.insert(idCanciones.get(j), cancionesOcurrencias.get(idCanciones.get(j)));
+            top5.insert(idCanciones.get(j), aparicionesCancion.get(idCanciones.get(j)));
         }
 
         System.out.println("TOP 5 el " + fecha + ":");
@@ -102,10 +103,11 @@ public class Consulta {
         }
     }
 
-    public void terceraConsulta(String fechaInicial, String fechaFinal) throws InformacionInvalida {
-        if (canciones.get(fechaInicial) == null || canciones.get(fechaFinal) == null) {
+    public void terceraConsulta(String fechaInicial, String fechaFinal) throws InformacionInvalida{
+        if (!(canciones.contains(fechaInicial)) || !(canciones.contains(fechaFinal))){
             throw new InformacionInvalida();
         }
+
         MyList<String> fechas = fechasEntreDosFechas(fechaInicial, fechaFinal);
         if (fechas == null) {
             throw new InformacionInvalida();
@@ -115,8 +117,9 @@ public class Consulta {
         MyList<Song> listaCancionesEnFecha = canciones.get(fechaInicial);
         Song cancionActual;
         MyHash<String, Integer> artistasOcurrencias = new MyHashImpl<>(10);
-        MyLinkedListImpl<String> artistasSingulares = new MyLinkedListImpl<String>();
+        MyLinkedListImpl<String> artistasSingulares = new MyLinkedListImpl<>();
         MyHeapImpl<String, Integer> top7 = new MyHeapImpl<String, Integer>(false);
+
         for (int k = 0; k < fechas.size(); k++) {
             i = 0;
             listaCancionesEnFecha = canciones.get(fechas.get(k));
@@ -148,7 +151,10 @@ public class Consulta {
     }
 
 
-    public void cuartaConsulta(String nombreArtista, String fecha) {
+    public void cuartaConsulta(String nombreArtista, String fecha) throws InformacionInvalida {
+        if(!fechasUnicas.contains(fecha)){
+            throw new InformacionInvalida();
+        }
         int cantidad = 0;
         int i = 0;
         MyList<Song> listaCancionesEnFecha = canciones.get(fecha);
@@ -164,7 +170,10 @@ public class Consulta {
         System.out.println( nombreArtista + "aparece " + cantidad + " veces en el top 50 en el " + fecha);
     }
 
-    public void quintaConsulta(double tempo1, double tempo2, String fechaInicial, String fechaFinal) {
+    public void quintaConsulta(double tempo1, double tempo2, String fechaInicial, String fechaFinal) throws InformacionInvalida {
+        if (!(canciones.contains(fechaInicial)) || !(canciones.contains(fechaFinal))){
+            throw new InformacionInvalida();
+        }
         int cantidad = 0;
         MyLinkedListImpl<String> cancionesUnicas = new MyLinkedListImpl<>();
         MyList<String> fechas = fechasEntreDosFechas(fechaInicial, fechaFinal);

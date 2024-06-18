@@ -236,46 +236,4 @@ public class MyLinkedListImpl<T> implements MyList<T>, MyQueue<T>, MyStack<T> {
             recorro_recu(RefNodo.getNext());
         }
     }
-
-    public String[] toArray() {
-        String[] array = new String[size()];
-        Node<T> current = this.first;
-        int index = 0;
-        while (current != null) {
-            array[index++] = (String) current.getValue();
-            current = current.getNext();
-        }
-        return array;
-    }
-
-    public void setByIndex(int position, T value) {
-        int tempPosition = 0;
-        Node<T> temp = this.first;
-
-        while (temp != null && tempPosition != position) {
-            temp = temp.getNext();
-            tempPosition++;
-        }
-
-        if (tempPosition == position) {
-            temp.setValue(value);
-        }
-    }
-
-    public void reverse() {
-
-        Node<T> previous = null;
-        Node<T> current = this.first;
-        Node<T> next = null;
-        this.last = this.first;
-
-        while (current != null) {
-            next = current.getNext();
-            current.setNext(previous);
-            previous = current;
-            current = next;
-        }
-
-        this.first = previous;
-    }
 }
