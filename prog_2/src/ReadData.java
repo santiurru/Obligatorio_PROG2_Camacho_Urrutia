@@ -29,6 +29,7 @@ public class ReadData {
                 for (String value : values) {
                     row.add(value);
                 }
+                
                 String spotifyId = row.get(0);
                 String name = row.get(1);
                 MyList<String> artists = parseArtists(row.get(2));

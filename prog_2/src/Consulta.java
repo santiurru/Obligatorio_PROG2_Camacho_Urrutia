@@ -24,16 +24,16 @@ public class Consulta {
         if(!fechasUnicas.contains(fecha)){
             throw new InformacionInvalida();
         }
-        MyList<Song> listaCancionesEnFecha = canciones.get(fecha);
-        MyHash<Integer, Song> hashTemp = new MyHashImpl<>(10);
+        MyList<Song> listaCancionesEnFecha = canciones.get(fecha);                //canciones de la fecha dada
+        MyHash<Integer, Song> hashTemp = new MyHashImpl<>(10);        //hash auxiliar para guardar las canciones del top
         Song cancionTemp;
         int i = 0;
         int j = 0;
 
-        while (i < 10 && j < listaCancionesEnFecha.size()) {
+        while (i < 10 && j < listaCancionesEnFecha.size()){
             cancionTemp = listaCancionesEnFecha.get(j);
-            if (cancionTemp.getCountry().equals(pais) && cancionTemp.getDaily_rank() < 11) {
-                hashTemp.put(cancionTemp.getDaily_rank(), cancionTemp);
+            if (cancionTemp.getCountry().equals(pais) && cancionTemp.getDaily_rank() < 11){
+                hashTemp.put(cancionTemp.getDaily_rank(), cancionTemp);                       // guarda las canciones del top 10 en el hash por su ranking
                 i++;
             }
             j++;
@@ -62,7 +62,6 @@ public class Consulta {
         if(!fechasUnicas.contains(fecha)){
             throw new InformacionInvalida();
         }
-        int i = 0;
         MyList<Song> listaCancionesEnFecha = canciones.get(fecha);
         MyHash<String, Integer> aparicionesCancion = new MyHashImpl<>(50); //guarda las veces q cada cancion aparecio
         MyList<String> idCanciones = new MyLinkedListImpl<>(); //guarda los spotify id de las canciones
@@ -70,6 +69,7 @@ public class Consulta {
         MyHash<String, String> idNombre = new MyHashImpl<>(50);
         Integer nroTemp;
         Song cancionActual;
+        int i = 0;
 
         while (i < listaCancionesEnFecha.size() - 1) {
             cancionActual = listaCancionesEnFecha.get(i);
@@ -118,7 +118,7 @@ public class Consulta {
         Song cancionActual;
         MyHash<String, Integer> artistasOcurrencias = new MyHashImpl<>(10);
         MyLinkedListImpl<String> artistasSingulares = new MyLinkedListImpl<>();
-        MyHeapImpl<String, Integer> top7 = new MyHeapImpl<String, Integer>(false);
+        MyHeapImpl<String, Integer> top7 = new MyHeapImpl<>(false);
 
         for (int k = 0; k < fechas.size(); k++) {
             i = 0;
@@ -198,21 +198,22 @@ public class Consulta {
     public MyList<String> fechasEntreDosFechas(String fechaInicial, String fechaFinal) {
         LocalDate fechaInicio = LocalDate.parse(fechaInicial, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         LocalDate fechaFin = LocalDate.parse(fechaFinal, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        if(ChronoUnit.DAYS.between(fechaInicio, fechaFin) > 0) {
+        if(ChronoUnit.DAYS.between(fechaInicio, fechaFin) > 0){
             MyList<String> fechas = new MyLinkedListImpl<>();
             boolean found = false;
-            for(int i = 0;i < fechasUnicas.size(); i++) {
-                if(found) {
+            for(int i = 0; i < fechasUnicas.size(); i++) {
+                if(fechasUnicas.get(i).equals(fechaInicial)) {
+                    found = true;
+                    fechas.add(fechasUnicas.get(i));
+                }
+                if(found){
                     if(fechasUnicas.get(i).equals(fechaFinal)) {
                         fechas.add(fechasUnicas.get(i));
                         break;
                     }
                     fechas.add(fechasUnicas.get(i));
                 }
-                if(fechasUnicas.get(i).equals(fechaInicial)) {
-                    found = true;
-                    fechas.add(fechasUnicas.get(i));
-                }
+
             }
             return fechas;
         }

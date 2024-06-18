@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="bienn commit" />
+    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="bienn commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/Consulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Consulta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/ReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/ReadData.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,6 +170,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="uwu commit" />
     <MESSAGE value="ayuda commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="ayuda commit" />
+    <MESSAGE value="bienn commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="bienn commit" />
   </component>
 </project>
