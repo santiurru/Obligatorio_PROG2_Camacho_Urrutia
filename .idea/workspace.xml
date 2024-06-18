@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="bienn commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2/src/Consulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Consulta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2/src/ReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/ReadData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2/src/uy/edu/um/prog2/adt/linkedlist/MyLinkedListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/uy/edu/um/prog2/adt/linkedlist/MyLinkedListImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2/src/uy/edu/um/prog2/adt/linkedlist/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/uy/edu/um/prog2/adt/linkedlist/MyList.java" afterDir="false" />
-    </list>
+    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="bienn commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +94,7 @@
       <workItem from="1718563833662" duration="136000" />
       <workItem from="1718628776281" duration="16000" />
       <workItem from="1718629836379" duration="3249000" />
-      <workItem from="1718718191088" duration="1957000" />
+      <workItem from="1718718191088" duration="2631000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
