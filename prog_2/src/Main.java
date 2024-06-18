@@ -5,6 +5,7 @@ public class Main {
 
     static int menu_principal(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println();
         System.out.println("---------------------------Menu Principal----------------------------");
         System.out.println();
         System.out.println("Opciones disponibles:");
@@ -23,26 +24,48 @@ public class Main {
             return menu_principal();
         }
     }
-    static void menu_consulta_1(){
+
+    static void switch_menu(int opcion, Consulta consultas){
+
+        switch(opcion){
+            case 1:
+                menu_consulta_1(consultas);
+                break;
+            case 2:
+                menu_consulta_2(consultas);
+                break;
+            case 6:
+                break;
+        }
+    }
+    static void menu_consulta_1(Consulta cons){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el codigo de Pais (Ejemplo: UY): ");
+        String pais = scanner.nextLine();
+        System.out.println("Ingrese la fecha (YYYY-MM-DD): ");
+        String fecha = scanner.nextLine();
+        try {
+            cons.primeraConsulta(pais, fecha);
+        } catch (InformacionInvalida e) {
+            System.out.println("La informacion es invalida, intente nuevamente");
+            menu_consulta_1(cons);
+        }
+
 
     }
-    static void menu_consulta_2(){
-        
+    static void menu_consulta_2(Consulta cons){
+
     }
 
     public static void main(String[] args) {
         Consulta consultas = new Consulta();
         int opcion = menu_principal();
-        switch(opcion){
-            case 1:
-                menu_consulta_1();
-                break;
-            case 2:
-                menu_consulta_2();
-                break;
-            case 6:
-
+        while(opcion != 6){
+            switch_menu(opcion, consultas);
+            opcion = menu_principal();
         }
+
+
 
     }
 }
