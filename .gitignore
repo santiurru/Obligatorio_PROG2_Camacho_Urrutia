@@ -4,7 +4,7 @@ out/
 !**/src/test/**/out/
 *.csv
 *.xml
-
+*.iml
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -29,3 +29,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+.idea

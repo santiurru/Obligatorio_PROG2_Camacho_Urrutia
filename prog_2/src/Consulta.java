@@ -44,6 +44,7 @@ public class Consulta {
             cancionTemp = hashTemp.get(hashTemp.keys().get(i));
             if (cancionTemp.getArtists().size() > 1) {
                 System.out.print(cancionTemp.getDaily_rank() + ". " + cancionTemp.getName() + ",de ");
+
                 for (int k = 0; k < cancionTemp.getArtists().size(); k++) {
                     if (k == cancionTemp.getArtists().size()-1) {
                         System.out.println(cancionTemp.getArtists().get(k));
