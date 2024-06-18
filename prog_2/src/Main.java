@@ -54,7 +54,15 @@ public class Main {
 
     }
     static void menu_consulta_2(Consulta cons){
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese la fecha (YYYY-MM-DD): ");
+        String fecha = scanner.nextLine();
+        try {
+            cons.segundaConsulta(fecha);
+        } catch (InformacionInvalida e) {
+            System.out.println("La informacion es invalida, intente nuevamente");
+            menu_consulta_2(cons);
+        }
     }
 
     public static void main(String[] args) {
