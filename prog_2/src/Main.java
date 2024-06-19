@@ -34,6 +34,8 @@ public class Main {
             case 2:
                 menu_consulta_2(consultas);
                 break;
+            case 3:
+                menu_consulta_3(consultas);
             case 6:
                 break;
         }
@@ -62,6 +64,20 @@ public class Main {
         } catch (InformacionInvalida e) {
             System.out.println("La informacion es invalida, intente nuevamente");
             menu_consulta_2(cons);
+        }
+    }
+
+    static void menu_consulta_3(Consulta cons){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese la fecha inicial (desde) (YYYY-MM-DD): ");
+        String fecha_ini = scanner.nextLine();
+        System.out.println("Ingrese la fecha final (hasta) (YYYY-MM-DD): ");
+        String fecha_fin = scanner.nextLine();
+        try {
+            cons.terceraConsulta(fecha_ini, fecha_fin);
+        } catch (InformacionInvalida e) {
+            System.out.println("La informacion es invalida, intente nuevamente");
+            menu_consulta_3(cons);
         }
     }
 
