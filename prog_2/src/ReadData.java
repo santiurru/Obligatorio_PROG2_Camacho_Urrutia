@@ -14,7 +14,8 @@ import java.util.List;
 public class ReadData {
     public static MyList<Object> importData(String filePath){
         MyList<String> fechasUnicas = new MyLinkedListImpl<>();
-        MyHash<String, MyList<Song>> canciones = new MyHashImpl<>(10);
+        MyHash<String, MyList<Song>> canciones = new MyHashImpl<>(30);
+        MyList<String> paisesUnicos = new MyLinkedListImpl<>();
         int i=0;
         MyList<Object> records = new MyLinkedListImpl<>();
         BufferedReader br;
@@ -58,6 +59,9 @@ public class ReadData {
 
                 Song cancion = new Song(spotifyId, name, artists, dailyRank, dailyMovement, weeklyMovement, country, snapshotDate, popularity, isExplicit, durationMs, albumName, albumReleaseDate, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, timeSignature);
 
+                if (!paisesUnicos.contains(country)){
+                    paisesUnicos.add(country);
+                }
                 if(!canciones.contains(snapshotDate)){
                     MyList<Song> cancionesEnFecha = new MyLinkedListImpl<>();
                     fechasUnicas.add(snapshotDate);
@@ -73,6 +77,7 @@ public class ReadData {
         }
         records.add(fechasUnicas);
         records.add(canciones);
+        records.add(paisesUnicos);
 
         return records;
     }

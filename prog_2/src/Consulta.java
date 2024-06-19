@@ -13,15 +13,17 @@ import java.time.temporal.ChronoUnit;
 public class Consulta {
     MyHash<String, MyList<Song>> canciones;
     MyList<String> fechasUnicas;
+    MyList<String> paisesUnicos;
 
     public Consulta() {
         MyList<Object> temp = ReadData.importData("universal_top_spotify_songs.csv");
+        this.paisesUnicos = (MyList<String>) temp.get(0);
         this.canciones = (MyHashImpl<String, MyList<Song>>) temp.get(1);
-        this.fechasUnicas = (MyLinkedListImpl<String>) temp.get(0);
+        this.fechasUnicas = (MyList<String>) temp.get(0);
     }
 
-    public void primeraConsulta(String pais, String fecha) throws InformacionInvalida {
-        if(!fechasUnicas.contains(fecha)){
+    public void consultaUno(String pais, String fecha) throws InformacionInvalida {
+        if(!(fechasUnicas.contains(fecha)) || !(paisesUnicos.contains(pais))){
             throw new InformacionInvalida();
         }
         MyList<Song> listaCancionesEnFecha = canciones.get(fecha);                //canciones de la fecha dada
@@ -59,7 +61,7 @@ public class Consulta {
         }
     }
 
-    public void segundaConsulta(String fecha) throws InformacionInvalida {
+    public void consultaDos(String fecha) throws InformacionInvalida {
         if(!fechasUnicas.contains(fecha)){
             throw new InformacionInvalida();
         }
@@ -104,7 +106,7 @@ public class Consulta {
         }
     }
 
-    public void terceraConsulta(String fechaInicial, String fechaFinal) throws InformacionInvalida{
+    public void consultaTres(String fechaInicial, String fechaFinal) throws InformacionInvalida{
         if (!(canciones.contains(fechaInicial)) || !(canciones.contains(fechaFinal))){
             throw new InformacionInvalida();
         }
@@ -152,7 +154,7 @@ public class Consulta {
     }
 
 
-    public void cuartaConsulta(String nombreArtista, String fecha) throws InformacionInvalida {
+    public void consultaCuatro(String nombreArtista, String fecha) throws InformacionInvalida {
         if(!fechasUnicas.contains(fecha)){
             throw new InformacionInvalida();
         }
@@ -171,7 +173,7 @@ public class Consulta {
         System.out.println( nombreArtista + "aparece " + cantidad + " veces en el top 50 en el " + fecha);
     }
 
-    public void quintaConsulta(double tempo1, double tempo2, String fechaInicial, String fechaFinal) throws InformacionInvalida {
+    public void consultaCinco(double tempo1, double tempo2, String fechaInicial, String fechaFinal) throws InformacionInvalida {
         if (!(canciones.contains(fechaInicial)) || !(canciones.contains(fechaFinal))){
             throw new InformacionInvalida();
         }

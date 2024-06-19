@@ -4,93 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="ayuda commit">
+    <list default="true" id="9b2efeb2-21e2-4386-8639-6bb8cef98d09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prog_2/src/Consulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Consulta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prog_2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/ReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/ReadData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2gSiegaqBqFL1lQYQNVFPUDhSsP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2i3gHGQ6GTt0Bd0hJxh4bUGL7Yp" />
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;help&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/matia/repositories/Obligatorio_PROG2_Camacho_Urrutia/prog_2_adts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "help",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/matia/repositories/Obligatorio_PROG2_Camacho_Urrutia/prog_2_adts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
->>>>>>> cbc43def96ac58f204d73f1069eaeb902b1b6010
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia\prog_2_adts" />
-      <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia\prog_2_adts\src" />
-      <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia\src\TADS" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia" />
-      <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia\prog_2_adts" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="TADS" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -104,92 +58,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="79c0ec22-7db8-4418-8268-bb4b7ec8d765" name="Changes" comment="" />
-      <created>1715697477334</created>
+      <changelist id="9b2efeb2-21e2-4386-8639-6bb8cef98d09" name="Changes" comment="" />
+      <created>1718724586983</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715697477334</updated>
-      <workItem from="1715697478380" duration="2135000" />
-      <workItem from="1715699738271" duration="709000" />
-      <workItem from="1715906984877" duration="362000" />
-      <workItem from="1715907494739" duration="13000" />
-      <workItem from="1715953302287" duration="60000" />
-      <workItem from="1716209730158" duration="79000" />
-      <workItem from="1718563833662" duration="136000" />
-      <workItem from="1718628776281" duration="16000" />
-      <workItem from="1718629836379" duration="3249000" />
-      <workItem from="1718718191088" duration="2631000" />
+      <updated>1718724586983</updated>
+      <workItem from="1718724591517" duration="110000" />
+      <workItem from="1718835597139" duration="1440000" />
     </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <option name="closed" value="true" />
-      <created>1715697545506</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1715697545506</updated>
-    </task>
-    <task id="LOCAL-00002" summary="initial commit">
-      <option name="closed" value="true" />
-      <created>1715698160981</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715698160981</updated>
-    </task>
-    <task id="LOCAL-00003" summary="initial commit">
-      <option name="closed" value="true" />
-      <created>1715907229585</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715907229585</updated>
-    </task>
-    <task id="LOCAL-00004" summary="initial commit">
-      <option name="closed" value="true" />
-      <created>1718563958822</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1718563958822</updated>
-    </task>
-    <task id="LOCAL-00005" summary="uwu commit">
-      <option name="closed" value="true" />
-      <created>1718630881979</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1718630881979</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ayuda commit">
-      <option name="closed" value="true" />
-      <created>1718633066636</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1718633066636</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="uwu commit" />
-    <MESSAGE value="ayuda commit" />
-    <MESSAGE value="bienn commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="bienn commit" />
   </component>
 </project>

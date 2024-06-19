@@ -36,6 +36,12 @@ public class Main {
                 break;
             case 3:
                 menu_consulta_3(consultas);
+                break;
+            case 4:
+                menu_consulta_4(consultas);
+                break;
+            case 5:
+                menu_consulta_5(consultas);
             case 6:
                 break;
         }
@@ -47,7 +53,7 @@ public class Main {
         System.out.println("Ingrese la fecha (YYYY-MM-DD): ");
         String fecha = scanner.nextLine();
         try {
-            cons.primeraConsulta(pais, fecha);
+            cons.consultaUno(pais, fecha);
         } catch (InformacionInvalida e) {
             System.out.println("La informacion es invalida, intente nuevamente");
             menu_consulta_1(cons);
@@ -60,7 +66,7 @@ public class Main {
         System.out.println("Ingrese la fecha (YYYY-MM-DD): ");
         String fecha = scanner.nextLine();
         try {
-            cons.segundaConsulta(fecha);
+            cons.consultaDos(fecha);
         } catch (InformacionInvalida e) {
             System.out.println("La informacion es invalida, intente nuevamente");
             menu_consulta_2(cons);
@@ -74,12 +80,44 @@ public class Main {
         System.out.println("Ingrese la fecha final (hasta) (YYYY-MM-DD): ");
         String fecha_fin = scanner.nextLine();
         try {
-            cons.terceraConsulta(fecha_ini, fecha_fin);
+            cons.consultaTres(fecha_ini, fecha_fin);
         } catch (InformacionInvalida e) {
             System.out.println("La informacion es invalida, intente nuevamente");
             menu_consulta_3(cons);
         }
     }
+
+    static void menu_consulta_4(Consulta cons){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del artista: ");
+        String artista = scanner.nextLine();
+        System.out.println("Ingrese la fecha (YYYY-MM-DD):");
+        String fecha = scanner.nextLine();
+        try {
+            cons.consultaCuatro(artista, fecha);
+        } catch (InformacionInvalida e) {
+            System.out.println("La informacion es invalida, intente nuevamente");
+            menu_consulta_4(cons);
+        }
+    }
+    static void menu_consulta_5(Consulta cons){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el rango de tempo inicial (double): ");
+        double tempo_ini = scanner.nextDouble();
+        System.out.println("Ingrese el rango de tempo final (double): ");
+        double tempo_fin = scanner.nextDouble();
+        System.out.println("Ingrese la fecha inicial (desde) (YYYY-MM-DD): ");
+        String fecha_ini = scanner.nextLine();
+        System.out.println("Ingrese la fecha final (hasta) (YYYY-MM-DD): ");
+        String fecha_fin = scanner.nextLine();
+        try {
+            cons.consultaCinco(tempo_ini, tempo_fin, fecha_ini, fecha_fin);
+        } catch (InformacionInvalida e) {
+            System.out.println("La informacion es invalida, intente nuevamente");
+            menu_consulta_5(cons);
+        }
+    }
+
 
     public static void main(String[] args) {
         Consulta consultas = new Consulta();
