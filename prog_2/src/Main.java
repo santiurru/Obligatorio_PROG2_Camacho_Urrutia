@@ -128,8 +128,5 @@ public class Main {
             switch_menu(opcion, consultas);
             opcion = menu_principal();
         }
-
-
-
     }
 }

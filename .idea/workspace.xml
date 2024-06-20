@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b2efeb2-21e2-4386-8639-6bb8cef98d09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2/src/Consulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Consulta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prog_2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prog_2/src/ReadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/ReadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog_2/src/entities/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/prog_2/src/entities/Song.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,20 +27,20 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "help",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;help&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matia\repositories\Obligatorio_PROG2_Camacho_Urrutia" />
@@ -64,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718724586983</updated>
       <workItem from="1718724591517" duration="110000" />
-      <workItem from="1718835597139" duration="1440000" />
+      <workItem from="1718835597139" duration="2895000" />
+      <workItem from="1718895035491" duration="1754000" />
     </task>
     <servers />
   </component>
