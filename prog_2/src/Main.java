@@ -104,8 +104,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese el rango de tempo inicial (double): ");
         double tempo_ini = scanner.nextDouble();
+        scanner.nextLine();
         System.out.println("Ingrese el rango de tempo final (double): ");
         double tempo_fin = scanner.nextDouble();
+        scanner.nextLine();
         System.out.println("Ingrese la fecha inicial (desde) (YYYY-MM-DD): ");
         String date_ini = scanner.nextLine();
         System.out.println("Ingrese la fecha final (hasta) (YYYY-MM-DD): ");
