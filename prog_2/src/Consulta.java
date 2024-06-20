@@ -170,7 +170,7 @@ public class Consulta {
             }
             i++;
         }
-        System.out.println( nombreArtista + "aparece " + cantidad + " veces en el top 50 en el " + fecha);
+        System.out.println( nombreArtista + " aparece " + cantidad + " veces en el top 50 en el " + fecha);
     }
 
     public void consultaCinco(double tempo1, double tempo2, String fechaInicial, String fechaFinal) throws InformacionInvalida {

@@ -13,7 +13,7 @@ public class Main {
         System.out.println("1: Top 10 canciones en un pais (dia dado)");
         System.out.println("2: Top 5 canciones en mas top 50 (dia dado)");
         System.out.println("3: Top 7 artistas en mas top 50 (rango de fechas)");
-        System.out.println("4: Apariciones de un artista en un top 50 (Rango de fechas)");
+        System.out.println("4: Apariciones de un artista en un top 50 (Dia dado)");
         System.out.println("5: Cantidad de canciones con un tempo especifico (Rango de fechas)");
         System.out.println("6: EXIT");
         int opcion = scanner.nextInt();
@@ -107,11 +107,11 @@ public class Main {
         System.out.println("Ingrese el rango de tempo final (double): ");
         double tempo_fin = scanner.nextDouble();
         System.out.println("Ingrese la fecha inicial (desde) (YYYY-MM-DD): ");
-        String fecha_ini = scanner.nextLine();
+        String date_ini = scanner.nextLine();
         System.out.println("Ingrese la fecha final (hasta) (YYYY-MM-DD): ");
-        String fecha_fin = scanner.nextLine();
+        String date_fin = scanner.nextLine();
         try {
-            cons.consultaCinco(tempo_ini, tempo_fin, fecha_ini, fecha_fin);
+            cons.consultaCinco(tempo_ini, tempo_fin, date_ini, date_fin);
         } catch (InformacionInvalida e) {
             System.out.println("La informacion es invalida, intente nuevamente");
             menu_consulta_5(cons);
