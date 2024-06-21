@@ -17,7 +17,7 @@ public class Consulta {
 
     public Consulta() {
         MyList<Object> temp = ReadData.importData("universal_top_spotify_songs.csv");
-        this.paisesUnicos = (MyList<String>) temp.get(0);
+        this.paisesUnicos = (MyList<String>) temp.get(2);
         this.canciones = (MyHashImpl<String, MyList<Song>>) temp.get(1);
         this.fechasUnicas = (MyList<String>) temp.get(0);
     }
@@ -101,58 +101,60 @@ public class Consulta {
 
         System.out.println("TOP 5 el " + fecha + ":");
         for (int k = 1; k < 6; k++) {
-            System.out.println(k + ". " + idNombre.get(top5.get().getKey()) + ": " + top5.get().getValue() + " ocurrencias.");
+            System.out.println(k + ". " + idNombre.get(top5.get().getKey()) + ": " + top5.get().getValue() + " veces.");
             top5.delete();
         }
     }
 
-    public void consultaTres(String fechaInicial, String fechaFinal) throws InformacionInvalida{
-        if (!(canciones.contains(fechaInicial)) || !(canciones.contains(fechaFinal))){
+    public void consultaTres(String fechaInicial, String fechaFinal) throws InformacionInvalida {
+        LocalDate fechaInicio = LocalDate.parse(fechaInicial, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        LocalDate fechaFin = LocalDate.parse(fechaFinal, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        if (fechaInicio.isAfter(fechaFin)) {
             throw new InformacionInvalida();
+        }
+        int diferenciaDias = 0;
+        while (fechaInicio.plusDays(diferenciaDias).isBefore(fechaFin)) {
+            diferenciaDias++;
         }
 
-        MyList<String> fechas = fechasEntreDosFechas(fechaInicial, fechaFinal);
-        if (fechas == null) {
-            throw new InformacionInvalida();
-        }
-        int i = 0;
         Integer nroTemp;
-        MyList<Song> listaCancionesEnFecha = canciones.get(fechaInicial);
+        MyList<Song> listaCancionesEnFecha = new MyLinkedListImpl<>(); // lista auxiliar
         Song cancionActual;
-        MyHash<String, Integer> artistasOcurrencias = new MyHashImpl<>(10);
-        MyLinkedListImpl<String> artistasSingulares = new MyLinkedListImpl<>();
+        MyHash<String, Integer> artistasOcurrencias = new MyHashImpl<>(10); // guarda cantidad de apariciones por artista
+        MyList<String> artistasSingulares = new MyLinkedListImpl<>(); //guarda el nombre de todos los artistas
         MyHeapImpl<String, Integer> top7 = new MyHeapImpl<>(false);
 
-        for (int k = 0; k < fechas.size(); k++) {
-            i = 0;
-            listaCancionesEnFecha = canciones.get(fechas.get(k));
-            while (i < listaCancionesEnFecha.size() - 1) {
-                cancionActual = listaCancionesEnFecha.get(i);
-                for (int j = 0; j < cancionActual.getArtists().size(); j++) {
-                    if (!artistasSingulares.contains(cancionActual.getArtists().get(j))) {
-                        artistasSingulares.add(cancionActual.getArtists().get(j));
-                    }
-                    if (artistasOcurrencias.contains(cancionActual.getArtists().get(j))) {
-                        nroTemp = artistasOcurrencias.get(cancionActual.getArtists().get(j));
-                        artistasOcurrencias.remove(cancionActual.getArtists().get(j));
-                        artistasOcurrencias.put(cancionActual.getArtists().get(j), nroTemp + 1);
-                    } else {
-                        artistasOcurrencias.put(cancionActual.getArtists().get(j), 1);
+        for (int i = 0; i < diferenciaDias; i++) {
+            LocalDate tempFecha = fechaInicio.plusDays(i);
+            String tempFecha1 = tempFecha.toString();
+            if (canciones.contains(tempFecha1)) {
+                listaCancionesEnFecha = canciones.get(tempFecha1);
+                for (int k = 0; k < listaCancionesEnFecha.size(); k++) {
+                    cancionActual = listaCancionesEnFecha.get(k);
+                    for (int j = 0; j < cancionActual.getArtists().size(); j++) {
+                        if (!artistasSingulares.contains(cancionActual.getArtists().get(j))) {
+                            artistasSingulares.add(cancionActual.getArtists().get(j));
+                        }
+                        if (artistasOcurrencias.contains(cancionActual.getArtists().get(j))) {
+                            nroTemp = artistasOcurrencias.get(cancionActual.getArtists().get(j));
+                            artistasOcurrencias.remove(cancionActual.getArtists().get(j));
+                            artistasOcurrencias.put(cancionActual.getArtists().get(j), nroTemp + 1);
+                        } else {
+                            artistasOcurrencias.put(cancionActual.getArtists().get(j), 1);
+                        }
                     }
                 }
-                i++;
             }
         }
         for (int j = 0; j < artistasSingulares.size(); j++) {
             top7.insert(artistasSingulares.get(j), artistasOcurrencias.get(artistasSingulares.get(j)));
         }
-        System.out.println("TOP 7 entre " + fechaInicial + " hasta "+ fechaFinal+ ":");
+        System.out.println("TOP 7 entre " + fechaInicial + " hasta " + fechaFinal + ":");
         for (int j = 1; j < 8; j++) {
-            System.out.println(j + ". " + top7.get().getKey() + ": " + top7.get().getValue() + " ocurrencias.");
+            System.out.println(j + ". " + top7.get().getKey() + ": " + top7.get().getValue() + " veces.");
             top7.delete();
         }
     }
-
 
     public void consultaCuatro(String nombreArtista, String fecha) throws InformacionInvalida {
         if(!fechasUnicas.contains(fecha)){
@@ -174,52 +176,37 @@ public class Consulta {
     }
 
     public void consultaCinco(double tempo1, double tempo2, String fechaInicial, String fechaFinal) throws InformacionInvalida {
-        if (!(canciones.contains(fechaInicial)) || !(canciones.contains(fechaFinal))){
-            throw new InformacionInvalida();
-        }
-        int cantidad = 0;
-        MyLinkedListImpl<String> cancionesUnicas = new MyLinkedListImpl<>();
-        MyList<String> fechas = fechasEntreDosFechas(fechaInicial, fechaFinal);
-        Song cancionActual;
-        MyList<Song> listaCancionesEnFecha;
-        int i = 0;
-        for(int k = 0; k < fechas.size(); k++) {
-            i = 0;
-            listaCancionesEnFecha = canciones.get(fechas.get(k));
-            while (i < listaCancionesEnFecha.size()- 1) {
-                cancionActual = listaCancionesEnFecha.get(i);
-                if (!cancionesUnicas.contains(cancionActual.getSpotify_id()) && cancionActual.getTempo() >= tempo1 && cancionActual.getTempo() <= tempo2) {
-                    cancionesUnicas.add(cancionActual.getSpotify_id());
-                    cantidad++;
-                }
-                i++;
-            }
-        }
-        System.out.println("Hay " + cantidad + " canciones entre el" + fechaInicial + " y el" + fechaFinal + " entre ese rango de tempo.");
-    }
-    
-    public MyList<String> fechasEntreDosFechas(String fechaInicial, String fechaFinal) {
         LocalDate fechaInicio = LocalDate.parse(fechaInicial, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         LocalDate fechaFin = LocalDate.parse(fechaFinal, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        if(ChronoUnit.DAYS.between(fechaInicio, fechaFin) > 0){
-            MyList<String> fechas = new MyLinkedListImpl<>();
-            boolean found = false;
-            for(int i = 0; i < fechasUnicas.size(); i++) {
-                if(fechasUnicas.get(i).equals(fechaInicial)) {
-                    found = true;
-                    fechas.add(fechasUnicas.get(i));
-                }
-                if(found){
-                    if(fechasUnicas.get(i).equals(fechaFinal)) {
-                        fechas.add(fechasUnicas.get(i));
-                        break;
-                    }
-                    fechas.add(fechasUnicas.get(i));
-                }
-
-            }
-            return fechas;
+        if (fechaInicio.isAfter(fechaFin)) {
+            throw new InformacionInvalida();
         }
-        return null;
+        int diferenciaDias = 0;
+        while (fechaInicio.plusDays(diferenciaDias).isBefore(fechaFin)) {
+            diferenciaDias++;
+        }
+
+        int cantidad = 0;
+        MyLinkedListImpl<String> cancionesCumplen = new MyLinkedListImpl<>();
+        Song cancionActual;
+        MyList<Song> listaCancionesEnFecha= new MyLinkedListImpl<>();
+
+        for(int k = 0; k < diferenciaDias; k++) {
+            int i = 0;
+            LocalDate tempFecha = fechaInicio.plusDays(k);
+            String tempFecha1 = tempFecha.toString();
+            if (canciones.contains(tempFecha1)) {
+                listaCancionesEnFecha = canciones.get(tempFecha1);
+                while (i < listaCancionesEnFecha.size() - 1) {
+                    cancionActual = listaCancionesEnFecha.get(i);
+                    if (!cancionesCumplen.contains(cancionActual.getSpotify_id()) && cancionActual.getTempo() >= tempo1 && cancionActual.getTempo() <= tempo2) {
+                        cancionesCumplen.add(cancionActual.getSpotify_id());
+                        cantidad++;
+                    }
+                    i++;
+                }
+            }
+        }
+        System.out.println("Hay " + cantidad + " canciones entre el " + fechaInicial + " y el " + fechaFinal + " con ese rango de tempo.");
     }
 }
