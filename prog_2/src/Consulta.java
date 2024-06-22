@@ -163,7 +163,6 @@ public class Consulta {
         int cantidad = 0;
         int i = 0;
         MyList<Song> listaCancionesEnFecha = canciones.get(fecha);
-        boolean encontro = false;
         Song cancionActual;
         while (i < listaCancionesEnFecha.size()) {
             cancionActual = listaCancionesEnFecha.get(i);
